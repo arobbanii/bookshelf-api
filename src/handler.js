@@ -140,7 +140,7 @@ const updateBookHandler = (request, h) => {
 
 const deleteBookByIdHandler = (request, h) => {
     const { bookId } = request.params;
-    const index = books.findIndex((book) => {book.id === bookId});
+    const index = books.findIndex((book) => book.id === bookId);
     if (index !== -1) {
         books.splice(index, 1);
         const response = h.response({
